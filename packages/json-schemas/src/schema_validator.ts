@@ -14,6 +14,7 @@ export class SchemaValidator {
     constructor() {
         this._validator = new Validator();
         for (const schema of values(schemas)) {
+            console.log(schema);
             this._validator.addSchema(schema, schema.id);
         }
     }
